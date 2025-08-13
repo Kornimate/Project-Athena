@@ -8,17 +8,14 @@
         <vm:MainViewModel />
     </ContentPage.BindingContext>
 
-    <ScrollView>
+    <ScrollView
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25"
             VerticalOptions="Fill"
             HorizontalOptions="Center">
-
-            <Label
-                Text="Athena"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
 
             <Button
                 Text="Flash Cards Mode" 
