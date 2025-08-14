@@ -1,4 +1,6 @@
-﻿using Athena.ViewModels;
+﻿using Athena.Interfaces;
+using Athena.Services;
+using Athena.ViewModels;
 using Athena.Views;
 using Microsoft.Extensions.Logging;
 
@@ -25,6 +27,9 @@ namespace Athena
             //ViewModels
             builder.Services.AddSingleton<MainViewModel>();
             builder.Services.AddSingleton<ReadWordsViewModel>();
+
+            //Services
+            builder.Services.AddSingleton<IDataLoader, DataLoader>();
 
 #if DEBUG
     		builder.Logging.AddDebug();

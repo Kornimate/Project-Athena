@@ -1,13 +1,17 @@
-﻿using Athena.Models;
+﻿using Athena.Extensions;
+using Athena.Interfaces;
+using Athena.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Timers;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Athena.ViewModels
 {
@@ -58,54 +62,88 @@ namespace Athena.ViewModels
         public IAsyncRelayCommand NavigateToMainMenu { get; private set; }
         public IAsyncRelayCommand StartSession { get; private set; }
 
-        private readonly IDispatcherTimer _timer;
-        private int counter = 0;
         private List<WordModel> _words = [];
+        private Locale _greekLocale;
+        private Locale _englishLocale;
+        private SpeechOptions _greekSettings;
+        private SpeechOptions _englishSettings;
 
-        public ReadWordsViewModel()
+        private IDataLoader _dataLoader;
+        private CancellationTokenSource _ctsExit;
+
+        public ReadWordsViewModel(IDataLoader dataLoader)
         {
             NavigateToMainMenu = new AsyncRelayCommand(GoToMainMenu);
             StartSession = new AsyncRelayCommand(StartReading);
 
-            _timer = Dispatcher.GetForCurrentThread()!.CreateTimer();
-            _timer.Interval = TimeSpan.FromSeconds(5);
-            _timer.Tick += (s, e) =>
-            {
-                if(counter >= 150)
-                {
-                    _timer.Stop();
-                    return;
-                }
-
-                GreekInGreek = _words![counter].GreekInGreek;
-                GreekInLatin = _words![counter].GreekInLatin;
-                EnglishTranslation = _words![counter].EnglishTranslation;
-
-                counter++;
-            };
+            _dataLoader = dataLoader;
         }
 
         private async Task StartReading()
         {
-            if (_words.Count > 0)
-                return;
+            _ctsExit = new CancellationTokenSource();
 
-            using var stream = await FileSystem.OpenAppPackageFileAsync("example.json");
-            using var reader = new StreamReader(stream);
-            var json = await reader.ReadToEndAsync();
+            await SetUpWords();
 
-            JsonSerializerOptions options = new JsonSerializerOptions
+            await SetUpVoices();
+
+            try
             {
-                PropertyNameCaseInsensitive = true
+                await ReadWords(_ctsExit.Token);
+            }
+            catch (OperationCanceledException) { }
+        }
+
+        private async Task SetUpWords()
+        {
+            if (_words.Count == 0)
+                _words = await _dataLoader.LoadDataFromJson("example.json");
+
+            _words.Shuffle(); //shuffles in place
+        }
+
+        private async Task SetUpVoices()
+        {
+            var locales = await TextToSpeech.Default.GetLocalesAsync();
+
+            _greekLocale = locales.FirstOrDefault(e => e.Language == "el")!;
+            _englishLocale = locales.LastOrDefault(e => e.Language == "en")!;
+
+            _greekSettings = new SpeechOptions()
+            {
+                Locale = _greekLocale,
+                Pitch = 1.0f,
+                Volume = 1.0f
             };
 
-            _words = JsonSerializer.Deserialize<List<WordModel>>(json, options)!;
+            _englishSettings = new SpeechOptions()
+            {
+                Locale = _englishLocale,
+                Pitch = 1.0f,
+                Volume = 1.0f
+            };
+        }
 
-            _timer.Start();
+        private async Task ReadWords(CancellationToken token)
+        {
+            foreach(var word in _words)
+            {
+                token.ThrowIfCancellationRequested();
+
+                GreekInGreek = word.GreekInGreek;
+                GreekInLatin = word.GreekInLatin;
+                EnglishTranslation = word.EnglishTranslation;
+
+                await TextToSpeech.Default.SpeakAsync(word.GreekInGreek!, _greekSettings, token);
+                await TextToSpeech.Default.SpeakAsync(word.EnglishTranslation!, _englishSettings, token);
+
+                await Task.Delay(2000, token);
+            }
         }
 
         private async Task GoToMainMenu()
         {
+            _ctsExit?.Cancel();
             await Shell.Current.GoToAsync("..");
         }
     }
