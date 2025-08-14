@@ -1,0 +1,522 @@
+[
+  {
+    "greekInGreek": "το βιβλίο, τα βιβλία",
+    "greekInLatin": "to vivlio",
+    "englishTranslation": "the book, the books"
+  },
+  {
+    "greekInGreek": "ο φίλος, οι φίλοι",
+    "greekInLatin": "o filos",
+    "englishTranslation": "the friend, the friends"
+  },
+  {
+    "greekInGreek": "η φίλη, οι φίλες",
+    "greekInLatin": "i fili",
+    "englishTranslation": "the (female) friend, the (female) friends"
+  },
+  {
+    "greekInGreek": "το παιδί",
+    "greekInLatin": "to pethi",
+    "englishTranslation": "the child, the children"
+  },
+  {
+    "greekInGreek": "η πόρτα, οι πόρτες",
+    "greekInLatin": "i porta",
+    "englishTranslation": "the door, the doors"
+  },
+  {
+    "greekInGreek": "το σχολείο, τα σχολεία",
+    "greekInLatin": "to sholeio",
+    "englishTranslation": "the school, the schools"
+  },
+  {
+    "greekInGreek": "η πόλη, οι πόλες",
+    "greekInLatin": "i poli",
+    "englishTranslation": "the city, the cities"
+  },
+  {
+    "greekInGreek": "η χώρα, οι χώρες",
+    "greekInLatin": "i hora",
+    "englishTranslation": "the country, the countries"
+  },
+  {
+    "greekInGreek": "ο δρόμος, οι δρόμοι",
+    "greekInLatin": "o thromos",
+    "englishTranslation": "the road, the roads"
+  },
+  {
+    "greekInGreek": "το σπίτι, τα σπίτια",
+    "greekInLatin": "to spiti",
+    "englishTranslation": "the house, the houses"
+  },
+  {
+    "greekInGreek": "ο υπολογιστής",
+    "greekInLatin": "o ipologistis",
+    "englishTranslation": "the computer, the computers"
+  },
+  {
+    "greekInGreek": "η γλώσσα, οι γλώσσες",
+    "greekInLatin": "i glossa",
+    "englishTranslation": "the language, the languages"
+  },
+  {
+    "greekInGreek": "το τραπέζι, τα τραπέζια",
+    "greekInLatin": "to trapezi",
+    "englishTranslation": "the table, the tables"
+  },
+  {
+    "greekInGreek": "η καρέκλα, οι καρέκλες",
+    "greekInLatin": "i karekla",
+    "englishTranslation": "the chair, the chairs"
+  },
+  {
+    "greekInGreek": "το κινητό",
+    "greekInLatin": "to kinito",
+    "englishTranslation": "the mobile phone, the mobile phones"
+  },
+  {
+    "greekInGreek": "ο καθηγητής",
+    "greekInLatin": "o kathigitis",
+    "englishTranslation": "the teacher, the teachers"
+  },
+  {
+    "greekInGreek": "η καθηγήτρια, οι καθηγήτριες",
+    "greekInLatin": "i kathigitria",
+    "englishTranslation": "the teacher (female), the teachers (female)"
+  },
+  {
+    "greekInGreek": "το αυτοκίνητο, τα αυτοκίνητα",
+    "greekInLatin": "to avtokinito",
+    "englishTranslation": "the car, the cars"
+  },
+  {
+    "greekInGreek": "ο χρόνος, οι χρόνοι",
+    "greekInLatin": "o hronos",
+    "englishTranslation": "the time, the times"
+  },
+  {
+    "greekInGreek": "η μέρα, οι μέρες",
+    "greekInLatin": "i mera",
+    "englishTranslation": "the day, the days"
+  },
+  {
+    "greekInGreek": "η νύχτα, οι νύχτες",
+    "greekInLatin": "i nihta",
+    "englishTranslation": "the night, the nights"
+  },
+  {
+    "greekInGreek": "ο μήνας, οι μήνες",
+    "greekInLatin": "o minas",
+    "englishTranslation": "the month, the months"
+  },
+  {
+    "greekInGreek": "το νερό",
+    "greekInLatin": "to nero",
+    "englishTranslation": "the water, the waters"
+  },
+  {
+    "greekInGreek": "το φαγητό",
+    "greekInLatin": "to fagito",
+    "englishTranslation": "the food, the foods"
+  },
+  {
+    "greekInGreek": "το ψωμί",
+    "greekInLatin": "to psomi",
+    "englishTranslation": "the bread, the breads"
+  },
+  {
+    "greekInGreek": "το τυρί",
+    "greekInLatin": "to tiri",
+    "englishTranslation": "the cheese, the cheeses"
+  },
+  {
+    "greekInGreek": "η σαλάτα, οι σαλάτες",
+    "greekInLatin": "i salata",
+    "englishTranslation": "the salad, the salads"
+  },
+  {
+    "greekInGreek": "η κουζίνα, οι κουζίνες",
+    "greekInLatin": "i kouzina",
+    "englishTranslation": "the kitchen, the kitchens"
+  },
+  {
+    "greekInGreek": "ο καφές",
+    "greekInLatin": "o kafes",
+    "englishTranslation": "the coffee, the coffees"
+  },
+  {
+    "greekInGreek": "το τσάι, τα τσάια",
+    "greekInLatin": "to tsai",
+    "englishTranslation": "the tea, the teas"
+  },
+  {
+    "greekInGreek": "ο χυμός",
+    "greekInLatin": "o himos",
+    "englishTranslation": "the juice, the juices"
+  },
+  {
+    "greekInGreek": "το κατάστημα, τα κατάστημες",
+    "greekInLatin": "to katastima",
+    "englishTranslation": "the store, the stores"
+  },
+  {
+    "greekInGreek": "η αγορά",
+    "greekInLatin": "i agora",
+    "englishTranslation": "the market, the markets"
+  },
+  {
+    "greekInGreek": "η παραλία, οι παραλίες",
+    "greekInLatin": "i paralia",
+    "englishTranslation": "the beach, the beaches"
+  },
+  {
+    "greekInGreek": "η θάλασσα, οι θάλασσες",
+    "greekInLatin": "i thalassa",
+    "englishTranslation": "the sea, the seas"
+  },
+  {
+    "greekInGreek": "το νησί",
+    "greekInLatin": "to nisi",
+    "englishTranslation": "the island, the islands"
+  },
+  {
+    "greekInGreek": "το βουνό",
+    "greekInLatin": "to vouno",
+    "englishTranslation": "the mountain, the mountains"
+  },
+  {
+    "greekInGreek": "ο ήλιος, οι ήλιοι",
+    "greekInLatin": "o ilios",
+    "englishTranslation": "the sun, the suns"
+  },
+  {
+    "greekInGreek": "η βροχή",
+    "greekInLatin": "i vrohi",
+    "englishTranslation": "the rain, the rains"
+  },
+  {
+    "greekInGreek": "ο αέρας, οι αέρες",
+    "greekInLatin": "o aeras",
+    "englishTranslation": "the air, the airs"
+  },
+  {
+    "greekInGreek": "ο άνεμος, οι άνεμοι",
+    "greekInLatin": "o anemos",
+    "englishTranslation": "the wind, the winds"
+  },
+  {
+    "greekInGreek": "η μουσική",
+    "greekInLatin": "i mousiki",
+    "englishTranslation": "the music, the musics"
+  },
+  {
+    "greekInGreek": "η ταινία, οι ταινίες",
+    "greekInLatin": "i tenia",
+    "englishTranslation": "the movie, the movies"
+  },
+  {
+    "greekInGreek": "το βιβλιοπωλείο, τα βιβλιοπωλεία",
+    "greekInLatin": "to vivliopoleio",
+    "englishTranslation": "the bookstore, the bookstores"
+  },
+  {
+    "greekInGreek": "ο γιατρός",
+    "greekInLatin": "o giatros",
+    "englishTranslation": "the doctor, the doctors"
+  },
+  {
+    "greekInGreek": "η νοσοκόμα, οι νοσοκόμες",
+    "greekInLatin": "i nosokoma",
+    "englishTranslation": "the nurse, the nurses"
+  },
+  {
+    "greekInGreek": "το νοσοκομείο, τα νοσοκομεία",
+    "greekInLatin": "to nosokomeio",
+    "englishTranslation": "the hospital, the hospitals"
+  },
+  {
+    "greekInGreek": "το πάρκο, τα πάρκα",
+    "greekInLatin": "to parko",
+    "englishTranslation": "the park, the parks"
+  },
+  {
+    "greekInGreek": "το λεωφορείο, τα λεωφορεία",
+    "greekInLatin": "to leoforeio",
+    "englishTranslation": "the bus, the buses"
+  },
+  {
+    "greekInGreek": "το ποδήλατο, τα ποδήλατα",
+    "greekInLatin": "to pothilato",
+    "englishTranslation": "the bicycle, the bicycles"
+  },
+  {
+    "greekInGreek": "το αεροπλάνο, τα αεροπλάνα",
+    "greekInLatin": "to aeroplano",
+    "englishTranslation": "the airplane, the airplanes"
+  },
+  {
+    "greekInGreek": "ο σταθμός",
+    "greekInLatin": "o stathmos",
+    "englishTranslation": "the station, the stations"
+  },
+  {
+    "greekInGreek": "ο φούρνος, οι φούρνοι",
+    "greekInLatin": "o foirnos",
+    "englishTranslation": "the bakery, the bakeries"
+  },
+  {
+    "greekInGreek": "το σούπερ μάρκετ",
+    "greekInLatin": "to soiper market",
+    "englishTranslation": "the supermarket, the supermarkets"
+  },
+  {
+    "greekInGreek": "το εστιατόριο, τα εστιατόρια",
+    "greekInLatin": "to estiatorio",
+    "englishTranslation": "the restaurant, the restaurants"
+  },
+  {
+    "greekInGreek": "η ταβέρνα, οι ταβέρνες",
+    "greekInLatin": "i taverna",
+    "englishTranslation": "the taverna, the tavernas"
+  },
+  {
+    "greekInGreek": "το μουσείο, τα μουσεία",
+    "greekInLatin": "to mouseio",
+    "englishTranslation": "the museum, the museums"
+  },
+  {
+    "greekInGreek": "η εκκλησία, οι εκκλησίες",
+    "greekInLatin": "i ekklisia",
+    "englishTranslation": "the church, the churches"
+  },
+  {
+    "greekInGreek": "η πλατεία, οι πλατείες",
+    "greekInLatin": "i plateia",
+    "englishTranslation": "the square, the squares"
+  },
+  {
+    "greekInGreek": "το ποτάμι, τα ποτάμια",
+    "greekInLatin": "to potami",
+    "englishTranslation": "the river, the rivers"
+  },
+  {
+    "greekInGreek": "η λίμνη, οι λίμνες",
+    "greekInLatin": "i limni",
+    "englishTranslation": "the lake, the lakes"
+  },
+  {
+    "greekInGreek": "η παραγγελία, οι παραγγελίες",
+    "greekInLatin": "i parangelia",
+    "englishTranslation": "the order, the orders"
+  },
+  {
+    "greekInGreek": "το εισιτήριο, τα εισιτήρια",
+    "greekInLatin": "to isitirio",
+    "englishTranslation": "the ticket, the tickets"
+  },
+  {
+    "greekInGreek": "το δωμάτιο, τα δωμάτια",
+    "greekInLatin": "to thomatio",
+    "englishTranslation": "the room, the rooms"
+  },
+  {
+    "greekInGreek": "η πόρτα, οι πόρτες",
+    "greekInLatin": "i porta",
+    "englishTranslation": "the door, the doors"
+  },
+  {
+    "greekInGreek": "το παράθυρο, τα παράθυρα",
+    "greekInLatin": "to parathiro",
+    "englishTranslation": "the window, the windows"
+  },
+  {
+    "greekInGreek": "η οθόνη, οι οθόνες",
+    "greekInLatin": "i othoni",
+    "englishTranslation": "the screen, the screens"
+  },
+  {
+    "greekInGreek": "ο λογαριασμός",
+    "greekInLatin": "o logariasmos",
+    "englishTranslation": "the bill, the bills"
+  },
+  {
+    "greekInGreek": "εγώ είμαι, εσύ είσαι, αυτός/αυτή είναι",
+    "greekInLatin": "eime",
+    "englishTranslation": "to be"
+  },
+  {
+    "greekInGreek": "εγώ έχω, εσύ έχεις, αυτός/αυτή έχει",
+    "greekInLatin": "eho",
+    "englishTranslation": "to have"
+  },
+  {
+    "greekInGreek": "εγώ κάνω, εσύ κάνεις, αυτός/αυτή κάνει",
+    "greekInLatin": "kano",
+    "englishTranslation": "to do/make"
+  },
+  {
+    "greekInGreek": "εγώ θέλω, εσύ θέλεις, αυτός/αυτή θέλει",
+    "greekInLatin": "thelo",
+    "englishTranslation": "to want"
+  },
+  {
+    "greekInGreek": "εγώ πάω, εσύ πας, αυτός/αυτή πάει",
+    "greekInLatin": "pao",
+    "englishTranslation": "to go"
+  },
+  {
+    "greekInGreek": "εγώ πηγαίνω, εσύ πηγαίνεις, αυτός/αυτή πηγαίνει",
+    "greekInLatin": "pigaino",
+    "englishTranslation": "to go"
+  },
+  {
+    "greekInGreek": "εγώ βλέπω, εσύ βλέπεις, αυτός/αυτή βλέπει",
+    "greekInLatin": "vlepo",
+    "englishTranslation": "to see"
+  },
+  {
+    "greekInGreek": "εγώ λέω, εσύ λες, αυτός/αυτή λέει",
+    "greekInLatin": "leo",
+    "englishTranslation": "to say"
+  },
+  {
+    "greekInGreek": "εγώ ακούω, εσύ ακούς, αυτός/αυτή ακούει",
+    "greekInLatin": "akoio",
+    "englishTranslation": "to hear"
+  },
+  {
+    "greekInGreek": "εγώ παίζω, εσύ παίζεις, αυτός/αυτή παίζει",
+    "greekInLatin": "paizo",
+    "englishTranslation": "to play"
+  },
+  {
+    "greekInGreek": "εγώ τρώω, εσύ τρως, αυτός/αυτή τρώει",
+    "greekInLatin": "troo",
+    "englishTranslation": "to eat"
+  },
+  {
+    "greekInGreek": "εγώ πίνω, εσύ πίνεις, αυτός/αυτή πίνει",
+    "greekInLatin": "pino",
+    "englishTranslation": "to drink"
+  },
+  {
+    "greekInGreek": "εγώ γράφω, εσύ γράφεις, αυτός/αυτή γράφει",
+    "greekInLatin": "grafo",
+    "englishTranslation": "to write"
+  },
+  {
+    "greekInGreek": "εγώ διαβάζω, εσύ διαβάζεις, αυτός/αυτή διαβάζει",
+    "greekInLatin": "thiavazo",
+    "englishTranslation": "to read"
+  },
+  {
+    "greekInGreek": "εγώ μαθαίνω, εσύ μαθαίνεις, αυτός/αυτή μαθαίνει",
+    "greekInLatin": "mathaino",
+    "englishTranslation": "to learn"
+  },
+  {
+    "greekInGreek": "εγώ διδάσκω, εσύ διδάσκεις, αυτός/αυτή διδάσκει",
+    "greekInLatin": "thithasko",
+    "englishTranslation": "to teach"
+  },
+  {
+    "greekInGreek": "εγώ πηδάω, εσύ πηδάς, αυτός/αυτή πηδάει",
+    "greekInLatin": "pithao",
+    "englishTranslation": "to jump"
+  },
+  {
+    "greekInGreek": "εγώ τρέχω, εσύ τρέχεις, αυτός/αυτή τρέχει",
+    "greekInLatin": "treho",
+    "englishTranslation": "to run"
+  },
+  {
+    "greekInGreek": "εγώ οδηγώ, εσύ οδηγείς, αυτός/αυτή οδηγεί",
+    "greekInLatin": "othigo",
+    "englishTranslation": "to drive"
+  },
+  {
+    "greekInGreek": "εγώ έρχομαι, εσύ έρχεσαι, αυτός/αυτή έρχεται",
+    "greekInLatin": "erhome",
+    "englishTranslation": "to come"
+  },
+  {
+    "greekInGreek": "εγώ μένω, εσύ μένεις, αυτός/αυτή μένει",
+    "greekInLatin": "meno",
+    "englishTranslation": "to live/stay"
+  },
+  {
+    "greekInGreek": "εγώ δουλεύω, εσύ δουλεύεις, αυτός/αυτή δουλεύει",
+    "greekInLatin": "thouleio",
+    "englishTranslation": "to work"
+  },
+  {
+    "greekInGreek": "Καλημέρα!",
+    "greekInLatin": "kalimera!",
+    "englishTranslation": "Good morning!"
+  },
+  {
+    "greekInGreek": "Καλησπέρα!",
+    "greekInLatin": "kalispera!",
+    "englishTranslation": "Good evening!"
+  },
+  {
+    "greekInGreek": "Καληνύχτα!",
+    "greekInLatin": "kalinihta!",
+    "englishTranslation": "Good night!"
+  },
+  {
+    "greekInGreek": "Τι κάνεις;",
+    "greekInLatin": "ti kaneis?",
+    "englishTranslation": "How are you?"
+  },
+  {
+    "greekInGreek": "Ευχαριστώ πολύ!",
+    "greekInLatin": "efharisto poli!",
+    "englishTranslation": "Thank you very much!"
+  },
+  {
+    "greekInGreek": "Παρακαλώ.",
+    "greekInLatin": "parakalo.",
+    "englishTranslation": "You're welcome / Please."
+  },
+  {
+    "greekInGreek": "Συγγνώμη.",
+    "greekInLatin": "syngnomi.",
+    "englishTranslation": "Sorry / Excuse me."
+  },
+  {
+    "greekInGreek": "Πόσο κάνει;",
+    "greekInLatin": "poso kani?",
+    "englishTranslation": "How much is it?"
+  },
+  {
+    "greekInGreek": "Πού είναι η τουαλέτα;",
+    "greekInLatin": "pou ine i toualeta?",
+    "englishTranslation": "Where is the toilet?"
+  },
+  {
+    "greekInGreek": "Πώς σε λένε;",
+    "greekInLatin": "pos se lene?",
+    "englishTranslation": "What is your name?"
+  },
+  {
+    "greekInGreek": "Με λένε Γιάννη.",
+    "greekInLatin": "me lene yianni.",
+    "englishTranslation": "My name is Giannis."
+  },
+  {
+    "greekInGreek": "Δεν καταλαβαίνω.",
+    "greekInLatin": "den katalaveno.",
+    "englishTranslation": "I don't understand."
+  },
+  {
+    "greekInGreek": "Μιλάς αγγλικά;",
+    "greekInLatin": "milas anglika?",
+    "englishTranslation": "Do you speak English?"
+  },
+  {
+    "greekInGreek": "Ναι / Όχι",
+    "greekInLatin": "ne / ohi",
+    "englishTranslation": "Yes / No"
+  }
+]
