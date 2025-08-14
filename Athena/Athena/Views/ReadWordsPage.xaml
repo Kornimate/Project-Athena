@@ -3,11 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Athena.Views.ReadWordsPage"
              Title="ReadWordsPage"
-             xmlns:vm="clr-namespace:Athena.ViewModels">
+             xmlns:vm="clr-namespace:Athena.ViewModels"
+             x:DataType="vm:ReadWordsViewModel">
 
-    <!--<ContentPage.BindingContext>
-        <vm:ReadWordsViewModel />
-    </ContentPage.BindingContext>-->
 
     <Grid 
         RowDefinitions="*,Auto"

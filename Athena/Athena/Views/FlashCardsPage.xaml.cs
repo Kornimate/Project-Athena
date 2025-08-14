@@ -1,9 +1,16 @@
+using Athena.ViewModels;
+
 namespace Athena.Views;
 
 public partial class FlashCardsPage : ContentPage
 {
-	public FlashCardsPage()
+	private FlashCardsViewModel _viweModel;
+	public FlashCardsPage(FlashCardsViewModel viewModel)
 	{
 		InitializeComponent();
-	}
+
+		_viweModel = viewModel;
+
+        BindingContext = _viweModel;
+    }
 }

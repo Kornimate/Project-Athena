@@ -146,5 +146,12 @@ namespace Athena.ViewModels
             _ctsExit?.Cancel();
             await Shell.Current.GoToAsync("..");
         }
+
+        public void ClearText()
+        {
+            GreekInGreek = "";
+            GreekInLatin = "";
+            EnglishTranslation = "";
+        }
     }
 }

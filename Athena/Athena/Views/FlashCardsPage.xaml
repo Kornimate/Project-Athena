@@ -2,11 +2,48 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Athena.Views.FlashCardsPage"
-             Title="FlashCardsPage">
-    <VerticalStackLayout>
+             Title="Flash Cards"
+             xmlns:vm="clr-namespace:Athena.ViewModels"
+             x:DataType="vm:FlashCardsViewModel">
+
+
+    <Grid
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid BackgroundColor="Transparent"
+          Grid.Column="0">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding LeftTapCommand}" />
+            </Grid.GestureRecognizers>
+        </Grid>
+
+        <Grid BackgroundColor="Transparent"
+          Grid.Column="1">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding RightTapCommand}" />
+            </Grid.GestureRecognizers>
+        </Grid>
+
+        <VerticalStackLayout
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            Text="{Binding GreekInGreek}"
+            HorizontalTextAlignment="Center"/>
+        <Label 
+            Text="{Binding GreekInLatin}"
+            HorizontalTextAlignment="Center"/>
+        <Label 
+            Text="{Binding EnglishTranslation}"
+            HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+        
+    </Grid>
 </ContentPage>

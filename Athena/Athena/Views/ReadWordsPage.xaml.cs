@@ -14,4 +14,11 @@ public partial class ReadWordsPage : ContentPage
 
 		BindingContext = _viewModel;
 	}
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+		_viewModel.ClearText();
+    }
 }

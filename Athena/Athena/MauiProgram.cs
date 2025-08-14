@@ -27,6 +27,7 @@ namespace Athena
             //ViewModels
             builder.Services.AddSingleton<MainViewModel>();
             builder.Services.AddSingleton<ReadWordsViewModel>();
+            builder.Services.AddSingleton<FlashCardsViewModel>();
 
             //Services
             builder.Services.AddSingleton<IDataLoader, DataLoader>();
