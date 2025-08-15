@@ -92,26 +92,18 @@ namespace Athena.ViewModels
 
         private async Task GoFurther()
         {
+            if (counter >= _words.Count && _stateMachine.IsFinishedRound)
+                return;   
+            
             _stateMachine.Next();
-
-            if (_stateMachine.IsFinishedRound)
-            {
-
-                if (++counter >= _words.Count)
-                {
-                    counter = _words.Count - 1;
-                    _stateMachine.SetState(1);
-                    SetWords();
-                    Debug.WriteLine(counter);
-                    return;
-                }
-
-                Debug.WriteLine(counter);
-            }
 
             if (_stateMachine.IsAtRoundStart)
             {
+                ++counter;
+
                 _stateMachine.SetWord(_words[counter]);
+
+                Debug.WriteLine(counter);
             }
 
             SetWords();
@@ -119,27 +111,19 @@ namespace Athena.ViewModels
 
         private async Task GoBack()
         {
+            if (counter <= 0 && _stateMachine.IsAtRoundStart)
+                return;
+
             _stateMachine.Previous();
-
-            if (_stateMachine.IsAtRoundStart)
-            {
-                if (--counter <= 0)
-                {
-                    counter = 0;
-                    _stateMachine.SetState(0);
-                    SetWords();
-                    Debug.WriteLine(counter);
-                    return;
-                }
-
-                Debug.WriteLine(counter);
-            }
 
             if (_stateMachine.IsFinishedRound)
             {
-                _stateMachine.SetWord(_words[counter]);
-            }
+                --counter;
 
+                _stateMachine.SetWord(_words[counter]);
+                
+                Debug.WriteLine(counter);
+            }
 
             SetWords();
         }

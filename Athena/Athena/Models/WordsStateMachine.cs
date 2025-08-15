@@ -18,7 +18,7 @@ namespace Athena.Models
             get => _state == 0;
         }
 
-        private WordModel _wordModel;
+        private WordModel? _wordModel;
         private int _state = 0;
 
         public void Next()
