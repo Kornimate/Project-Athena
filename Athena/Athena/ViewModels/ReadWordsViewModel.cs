@@ -59,17 +59,32 @@ namespace Athena.ViewModels
             }
         }
 
+        private bool _hasStarted;
+
+        public bool HasStarted
+        {
+            get => _hasStarted;
+            set
+            {
+                if(_hasStarted != value)
+                {
+                    _hasStarted = value;
+                    OnPropertyChanged(nameof(HasStarted));
+                }
+            }
+        }
+
         public IAsyncRelayCommand NavigateToMainMenu { get; private set; }
         public IAsyncRelayCommand StartSession { get; private set; }
 
         private List<WordModel> _words = [];
-        private Locale _greekLocale;
-        private Locale _englishLocale;
-        private SpeechOptions _greekSettings;
-        private SpeechOptions _englishSettings;
+        private Locale? _greekLocale;
+        private Locale? _englishLocale;
+        private SpeechOptions? _greekSettings;
+        private SpeechOptions? _englishSettings;
 
         private IDataLoader _dataLoader;
-        private CancellationTokenSource _ctsExit;
+        private CancellationTokenSource? _ctsExit;
 
         public ReadWordsViewModel(IDataLoader dataLoader)
         {
@@ -77,6 +92,7 @@ namespace Athena.ViewModels
             StartSession = new AsyncRelayCommand(StartReading);
 
             _dataLoader = dataLoader;
+            HasStarted = false;
         }
 
         private async Task StartReading()
@@ -86,6 +102,8 @@ namespace Athena.ViewModels
             await SetUpWords();
 
             await SetUpVoices();
+
+            HasStarted = true;
 
             try
             {
@@ -143,6 +161,7 @@ namespace Athena.ViewModels
 
         private async Task GoToMainMenu()
         {
+            HasStarted = false;
             _ctsExit?.Cancel();
             await Shell.Current.GoToAsync("..");
         }
@@ -152,6 +171,7 @@ namespace Athena.ViewModels
             GreekInGreek = "";
             GreekInLatin = "";
             EnglishTranslation = "";
+            HasStarted = false;
         }
     }
 }

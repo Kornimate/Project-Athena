@@ -11,32 +11,40 @@
         RowDefinitions="*,Auto"
         Padding="20">
 
-        <VerticalStackLayout 
+        <Frame
             Grid.Row="0"
             VerticalOptions="Center"
             HorizontalOptions="Center"
-            Spacing="10">
+            BackgroundColor="DarkViolet"
+            IsVisible="{Binding HasStarted}">
 
-            <Label Text="{Binding GreekInGreek}"
-               HorizontalOptions="Center"
-               HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+            <VerticalStackLayout
+                Spacing="10">
 
-            <Label Text="{Binding GreekInLatin}"
-               HorizontalOptions="Center"
-               HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+                <Label Text="{Binding GreekInGreek}"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" 
+                   FontSize="20" />
 
-            <Label Text="{Binding EnglishTranslation}"
-               HorizontalOptions="Center"
-               HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+                <Label Text="{Binding GreekInLatin}"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="20"/>
 
-        </VerticalStackLayout>
+                <Label Text="{Binding EnglishTranslation}"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" 
+                   FontSize="20"/>
+
+            </VerticalStackLayout>
+        </Frame>
         <VerticalStackLayout
             Grid.Row="1"
             Spacing="5">
-            
+
             <Button
                 Text="Start"
                 SemanticProperties.Hint="Start session"
@@ -47,7 +55,7 @@
                 SemanticProperties.Hint="Go to main menu"
                 HorizontalOptions="Fill"
                 Command="{Binding NavigateToMainMenu}" />
-            
+
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

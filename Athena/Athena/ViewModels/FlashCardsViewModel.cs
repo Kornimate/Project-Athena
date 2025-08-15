@@ -62,7 +62,8 @@ namespace Athena.ViewModels
         private WordsStateMachine _stateMachine;
         private List<WordModel> _words = [];
         private IDataLoader _dataLoader;
-        private int counter = 0;
+        private int _counter = 0;
+        private bool _wordsReady;
 
         public FlashCardsViewModel(IDataLoader dataLoader)
         {
@@ -73,6 +74,8 @@ namespace Athena.ViewModels
 
             _dataLoader = dataLoader;
 
+            _wordsReady = false;
+
             _ = SetUpWords();
         }
 
@@ -81,6 +84,13 @@ namespace Athena.ViewModels
             if (_words.Count == 0)
                 _words = await _dataLoader.LoadDataFromJson("example.json");
 
+            _wordsReady = true;
+
+            HandleAlreadyReadWords();
+        }
+
+        private void HandleAlreadyReadWords()
+        {
             _words.Shuffle(); //shuffles in place
 
             _stateMachine.SetWord(_words[0]);
@@ -90,16 +100,16 @@ namespace Athena.ViewModels
 
         private async Task GoFurther()
         {
-            if (counter >= _words.Count && _stateMachine.IsFinishedRound)
+            if (_counter >= _words.Count && _stateMachine.IsFinishedRound)
                 return;   
             
             _stateMachine.Next();
 
             if (_stateMachine.IsAtRoundStart)
             {
-                ++counter;
+                ++_counter;
 
-                _stateMachine.SetWord(_words[counter]);
+                _stateMachine.SetWord(_words[_counter]);
             }
 
             SetWords();
@@ -107,16 +117,16 @@ namespace Athena.ViewModels
 
         private async Task GoBack()
         {
-            if (counter <= 0 && _stateMachine.IsAtRoundStart)
+            if (_counter <= 0 && _stateMachine.IsAtRoundStart)
                 return;
 
             _stateMachine.Previous();
 
             if (_stateMachine.IsFinishedRound)
             {
-                --counter;
+                --_counter;
 
-                _stateMachine.SetWord(_words[counter]);
+                _stateMachine.SetWord(_words[_counter]);
             }
 
             SetWords();
@@ -127,6 +137,15 @@ namespace Athena.ViewModels
             GreekInGreek = _stateMachine.GetGreekInGreek();
             GreekInLatin = _stateMachine.GetGreekInLatin();
             EnglishTranslation = _stateMachine.GetEnglishTranslation();
+        }
+
+        public void Clear()
+        {
+            _counter = 0;
+            _stateMachine?.SetState(0);
+
+            if(_wordsReady)
+                HandleAlreadyReadWords();
         }
     }
 }

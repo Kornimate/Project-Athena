@@ -13,4 +13,12 @@ public partial class FlashCardsPage : ContentPage
 
         BindingContext = _viweModel;
     }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        _viweModel.Clear();
+    }
+
 }

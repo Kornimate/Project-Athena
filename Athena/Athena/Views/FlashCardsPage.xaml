@@ -29,21 +29,29 @@
             </Grid.GestureRecognizers>
         </Grid>
 
-        <VerticalStackLayout
+        <Frame
+            CornerRadius="20"
             Grid.ColumnSpan="2"
             HorizontalOptions="Center"
-            VerticalOptions="Center">
-            
-        <Label 
-            Text="{Binding GreekInGreek}"
-            HorizontalTextAlignment="Center"/>
-        <Label 
-            Text="{Binding GreekInLatin}"
-            HorizontalTextAlignment="Center"/>
-        <Label 
-            Text="{Binding EnglishTranslation}"
-            HorizontalTextAlignment="Center"/>
-        </VerticalStackLayout>
-        
+            VerticalOptions="Center"
+            BackgroundColor="DarkViolet"
+            Padding="40">
+
+            <VerticalStackLayout>
+                <Label 
+                    Text="{Binding GreekInGreek}"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20"/>
+                <Label 
+                    Text="{Binding GreekInLatin}"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20"/>
+                <Label 
+                    Text="{Binding EnglishTranslation}"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20"/>
+            </VerticalStackLayout>
+        </Frame>
+
     </Grid>
 </ContentPage>
