@@ -86,8 +86,6 @@ namespace Athena.ViewModels
             _stateMachine.SetWord(_words[0]);
 
             SetWords();
-
-            Debug.WriteLine(counter);
         }
 
         private async Task GoFurther()
@@ -102,8 +100,6 @@ namespace Athena.ViewModels
                 ++counter;
 
                 _stateMachine.SetWord(_words[counter]);
-
-                Debug.WriteLine(counter);
             }
 
             SetWords();
@@ -121,8 +117,6 @@ namespace Athena.ViewModels
                 --counter;
 
                 _stateMachine.SetWord(_words[counter]);
-                
-                Debug.WriteLine(counter);
             }
 
             SetWords();
