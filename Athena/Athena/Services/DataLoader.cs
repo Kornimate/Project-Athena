@@ -1,7 +1,9 @@
 ﻿using Athena.Interfaces;
 using Athena.Models;
+using Microsoft.Maui.Storage;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -11,11 +13,20 @@ namespace Athena.Services
 {
     public class DataLoader : IDataLoader
     {
-        public async Task<List<WordModel>> LoadDataFromJson(string fileName)
+        public async Task<List<WordModel>> LoadWordsDataAsync()
         {
-            using var stream = await FileSystem.OpenAppPackageFileAsync("example.json");
-            using var reader = new StreamReader(stream);
-            var json = await reader.ReadToEndAsync();
+            string localPath = Path.Combine(FileSystem.AppDataDirectory, AppConfigurations.WordsFileName);
+
+            if (!File.Exists(localPath))
+            {
+                using var packageStream = await FileSystem.OpenAppPackageFileAsync(AppConfigurations.WordsFileName);
+                using var localStream = File.Create(localPath);
+
+                await packageStream.CopyToAsync(localStream);
+            }
+
+            using var reader = new StreamReader(File.OpenRead(localPath));
+            string json = await reader.ReadToEndAsync();
 
             JsonSerializerOptions options = new JsonSerializerOptions
             {

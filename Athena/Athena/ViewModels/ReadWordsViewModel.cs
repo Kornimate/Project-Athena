@@ -12,6 +12,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Timers;
 using static System.Net.Mime.MediaTypeNames;
+using MauiApp = Microsoft.Maui.Controls.Application; // Alias to resolve ambiguity
 
 namespace Athena.ViewModels
 {
@@ -83,16 +84,31 @@ namespace Athena.ViewModels
         private SpeechOptions? _greekSettings;
         private SpeechOptions? _englishSettings;
 
-        private IDataLoader _dataLoader;
+        private IWordCacheService _wordsService;
         private CancellationTokenSource? _ctsExit;
 
-        public ReadWordsViewModel(IDataLoader dataLoader)
+        private WordModel? _selectedWord;
+        public WordModel? SelectedWord
+        {
+            get => _selectedWord;
+            set => SetProperty(ref _selectedWord, value);
+        }
+
+        public ReadWordsViewModel(IWordCacheService wordsService)
         {
             NavigateToMainMenu = new AsyncRelayCommand(GoToMainMenu);
             StartSession = new AsyncRelayCommand(StartReading);
 
-            _dataLoader = dataLoader;
+            _wordsService = wordsService;
             HasStarted = false;
+
+            _wordsService.DataChanged += WordsChanged;
+        }
+
+        private void WordsChanged(object? sender, EventArgs e)
+        {
+            _words = _wordsService.CachedWords;
+            _words.Shuffle();
         }
 
         private async Task StartReading()
@@ -115,9 +131,11 @@ namespace Athena.ViewModels
         private async Task SetUpWords()
         {
             if (_words.Count == 0)
-                _words = await _dataLoader.LoadDataFromJson("example.json");
+                _words = _wordsService.CachedWords;
 
             _words.Shuffle(); //shuffles in place
+
+            ClearText();
         }
 
         private async Task SetUpVoices()
@@ -157,6 +175,12 @@ namespace Athena.ViewModels
 
                 await Task.Delay(2000, token);
             }
+        }
+
+        public void StopReading()
+        {
+            _ctsExit?.Cancel();
+            HasStarted = false;
         }
 
         private async Task GoToMainMenu()

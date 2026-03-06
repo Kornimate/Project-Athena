@@ -8,6 +8,7 @@
         <vm:MainViewModel />
     </ContentPage.BindingContext>
 
+
     <ScrollView
         HorizontalOptions="Center"
         VerticalOptions="Center">
@@ -28,6 +29,18 @@
                 SemanticProperties.Hint="Reads the words in multiple languages"
                 HorizontalOptions="Fill"
                 Command="{Binding NavigateToReadWords}"/>
+
+            <Button
+                Text="Add New Words" 
+                SemanticProperties.Hint="Possibily to add new words to existing ones"
+                HorizontalOptions="Fill"
+                Command="{Binding NavigateToAddWord}"/>
+
+            <Button
+                Text="Word List" 
+                SemanticProperties.Hint="List all words from DB"
+                HorizontalOptions="Fill"
+                Command="{Binding NavigateToListWords}"/>
         </VerticalStackLayout>
     </ScrollView>
 

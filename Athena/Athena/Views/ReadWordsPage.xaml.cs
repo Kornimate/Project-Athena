@@ -21,4 +21,10 @@ public partial class ReadWordsPage : ContentPage
 
 		_viewModel.ClearText();
     }
+
+	protected override void OnDisappearing()
+	{
+		base.OnDisappearing();
+		_viewModel.StopReading();
+    }
 }

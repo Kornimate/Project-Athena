@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Athena.Views.AddWordPage"
+             Title="Add Word"
+             xmlns:vm="clr-namespace:Athena.ViewModels"
+             x:DataType="vm:AddWordViewModel">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text="Greek (in Greek script)" FontAttributes="Bold" />
+                <Entry Text="{Binding GreekInGreek}" Placeholder="e.g. Καλημέρα" />
+
+                <Label Text="Greek (in Latin)" FontAttributes="Bold" />
+                <Entry Text="{Binding GreekInLatin}" Placeholder="e.g. Kalimera" />
+
+                <Label Text="English translation" FontAttributes="Bold" />
+                <Entry Text="{Binding EnglishTranslation}" Placeholder="e.g. Good morning" />
+
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Button Text="Save" Command="{Binding SaveCommand}" />
+                    <Button Text="Cancel" Command="{Binding CancelCommand}" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -10,6 +10,8 @@ namespace Athena
 
             Routing.RegisterRoute(nameof(ReadWordsPage), typeof(ReadWordsPage));
             Routing.RegisterRoute(nameof(FlashCardsPage), typeof(FlashCardsPage));
+            Routing.RegisterRoute(nameof(AddWordPage), typeof(AddWordPage));
+            Routing.RegisterRoute(nameof(ListWordsPage), typeof(ListWordsPage));
         }
     }
 }

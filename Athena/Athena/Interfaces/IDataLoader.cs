@@ -9,6 +9,6 @@ namespace Athena.Interfaces
 {
     public interface IDataLoader
     {
-        Task<List<WordModel>> LoadDataFromJson(string fileName);
+        Task<List<WordModel>> LoadWordsDataAsync();
     }
 }

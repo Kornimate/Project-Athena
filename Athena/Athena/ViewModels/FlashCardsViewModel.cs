@@ -61,28 +61,37 @@ namespace Athena.ViewModels
 
         private WordsStateMachine _stateMachine;
         private List<WordModel> _words = [];
-        private IDataLoader _dataLoader;
+        private IWordCacheService _wordsService;
         private int _counter = 0;
         private bool _wordsReady;
 
-        public FlashCardsViewModel(IDataLoader dataLoader)
+        public FlashCardsViewModel(IWordCacheService wordsService)
         {
             LeftTapCommand = new AsyncRelayCommand(GoBack);
             RightTapCommand = new AsyncRelayCommand(GoFurther);
 
             _stateMachine = new();
 
-            _dataLoader = dataLoader;
+            _wordsService = wordsService;
 
             _wordsReady = false;
 
             _ = SetUpWords();
+
+            _wordsService.DataChanged += RefreshWords;
+        }
+
+        private void RefreshWords(object? sender, EventArgs e)
+        {
+            _words = _wordsService.CachedWords;
+
+            HandleAlreadyReadWords();
         }
 
         private async Task SetUpWords()
         {
             if (_words.Count == 0)
-                _words = await _dataLoader.LoadDataFromJson("example.json");
+                _words = _wordsService.CachedWords;
 
             _wordsReady = true;
 
